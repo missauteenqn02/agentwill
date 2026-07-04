@@ -18,6 +18,24 @@ app.get('/api/watcher', async (req, res) => {
   await watcherHandler(req as any, res as any);
 });
 
+app.get('/api/mint', async (req, res) => {
+  try {
+    const { COIN_TYPES } = await import('@unicitylabs/sphere-sdk');
+    const principal = await getPrincipalSphere();
+    const watcher = await getWatcherSphere();
+    
+    // Mint 10,000 UCT to both wallets (6 decimals = 10000000000)
+    const amount = 10000000000n;
+    
+    await principal.payments.mintFungibleToken(COIN_TYPES.UCT, amount);
+    await watcher.payments.mintFungibleToken(COIN_TYPES.UCT, amount);
+    
+    res.json({ success: true, message: 'Successfully minted 10,000 UCT to both Principal and Watcher agents!' });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 app.listen(port, async () => {
   console.log(`[AgentWill] Server is running on port ${port}`);
   
