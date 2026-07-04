@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "AgentWill is a \"digital will\" for autonomous agents built on the Unicity Testnet v2 using the `@unicitylabs/sphere-sdk`.",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "22.x"
   },
   "main": "index.js",
   "scripts": {
