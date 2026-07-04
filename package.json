@@ -1,6 +1,7 @@
 {
-  "name": "principal-agent",
+  "name": "agentwill",
   "version": "1.0.0",
+  "description": "AgentWill is a \"digital will\" for autonomous agents built on the Unicity Testnet v2 using the `@unicitylabs/sphere-sdk`.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@unicitylabs/sphere-sdk": "^0.11.3",
     "dotenv": "^17.4.2",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
-    "ts-node": "^10.9.2",
+    "@vercel/node": "^5.8.22",
     "typescript": "^6.0.3"
   }
 }
