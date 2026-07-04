@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "AgentWill is a \"digital will\" for autonomous agents built on the Unicity Testnet v2 using the `@unicitylabs/sphere-sdk`.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +21,7 @@
   "devDependencies": {
     "@types/node": "^26.1.0",
     "@vercel/node": "^5.8.22",
+    "tsx": "^4.23.0",
     "typescript": "^6.0.3"
   }
 }
