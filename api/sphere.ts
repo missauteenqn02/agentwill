@@ -23,12 +23,13 @@ export async function getPrincipalSphere() {
 
     const providers = createWalletApiProviders(base, {
       baseUrl: 'https://wallet-api.unicity.network',
-      network: NETWORK as any,
+      network: 'testnet2',
       deviceId: 'agentwill-principal-vercel',
     });
 
     const result = await Sphere.init({
       ...providers,
+      network: NETWORK as any,
       autoGenerate: true,
       nametag
     });
@@ -48,12 +49,13 @@ export async function getWatcherSphere() {
 
     const providers = createWalletApiProviders(base, {
       baseUrl: 'https://wallet-api.unicity.network',
-      network: NETWORK as any,
+      network: 'testnet2',
       deviceId: 'agentwill-watcher-vercel',
     });
 
     const result = await Sphere.init({
       ...providers,
+      network: NETWORK as any,
       autoGenerate: true,
       nametag
     });
